@@ -1,0 +1,81 @@
+{% extends 'covid/main.html' %}
+
+{% block content %}
+<div class="d-flex justify-content-center">
+    <p class="text-info" style="font-size: 3em;">Global</p>
+</div>
+<br>
+<div class="row justify-content-center">
+    <div class="col-sm-3">
+        <div class="card">
+            <div class="card text-white bg-danger ">
+                <div class='heading'>
+                    <center>
+                        <h4 class="pb-3 pt-2" style="font-size: large;">Confirmed Cases</h4>
+                        <p class="card-text case-count" style="font-size: medium;"><i
+                                class="fas fa-sort-amount-up case-count"></i><span data-v-0abbdf5a=""
+                                class="pl-2">{{confirmed}}</span>
+                        <div class="text-center mt-3" style="font-size: 14px; ">+{{n_confirmed}}
+                        </div>
+                        </p>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="card">
+            <div class="card text-white bg-info ">
+                <div class='heading'>
+                    <center>
+                        <h4 class="pb-3 pt-2" style="font-size: large;">Active Cases</h4>
+                        <p class="card-text case-count" style="font-size: medium;"><i
+                                class="fas fa-sort-amount-up case-count"></i><span data-v-0abbdf5a=""
+                                class="pl-2">{{active}}</span>
+                        <div class="text-center mt-3" style="font-size: 14px; ">
+                            +{{n_active}}
+                        </div>
+                        </p>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class='row justify-content-around'>
+    <div class="col-sm-3">
+        <div class="card">
+            <div class="card text-white bg-success  ">
+                <div class='heading'>
+                    <center>
+                        <h4 class="pb-3 pt-2" style="font-size: large;">Recovered</h4>
+                        <p class="card-text case-count" style="font-size: medium;"><i
+                                class="fas fa-sort-amount-up case-count"></i><span data-v-0abbdf5a=""
+                                class="pl-2">{{recovered}}</span>
+                        <div class="text-center mt-3" style="font-size: 14px; ">
+                            +{{n_recovered}}
+                        </div>
+                        </p>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="card">
+            <div class="card text-white bg-dark">
+                <center>
+                    <h4 class="pb-3 pt-2" style="font-size: large;">Deaths</h4>
+                    <p class="card-text case-count" style="font-size: medium;"><i
+                            class="fas fa-sort-amount-up case-count"></i><span data-v-0abbdf5a=""
+                            class="pl-2">{{deaths}}</span>
+                    <div class="text-center mt-3" style="font-size: 14px; ">+{{n_deaths}}
+                    </div>
+                    </p>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
