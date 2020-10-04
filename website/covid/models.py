@@ -8,3 +8,10 @@ class Country(models.Model):
 
     def __str__(self):
         return self.country
+
+
+class Mod(models.Model):
+    count = models.CharField(max_length=200, null=True)
+
+    def __str__(self):
+        return self.count
